@@ -1,1 +1,17 @@
-# test for cc.txt
+git 
+git add .
+git add aa.txt
+git commit -m "提交说明"
+git push
+
+
+git 
+git log
+git reflog 
+git log --pretty=oneline
+git reset --hrad^
+git reset --hard 版本号
+
+
+git branch
+git checkout 分支名
