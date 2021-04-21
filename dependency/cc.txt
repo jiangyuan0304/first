@@ -9,6 +9,7 @@ git
 git log
 git reflog 
 git log --pretty=oneline
+git log --oneline
 git reset --hrad^
 git reset --hard 版本号
 
