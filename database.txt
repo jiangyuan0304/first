@@ -17,3 +17,6 @@ insert into SC(Sno, Cno, Grade) values("11111", "c03", 78);
 
 # 查询经过计算后的列
 select Sname , 2021-Sage from student;
+
+# 消除重复行
+distinct
