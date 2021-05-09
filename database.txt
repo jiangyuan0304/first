@@ -20,3 +20,16 @@ select Sname , 2021-Sage from student;
 
 # 消除重复行
 distinct
+
+# 比较
+>; < ;>= ; 
+# 确定范围
+between;and; not between and
+# 确定集合
+in； not in
+# 字符匹配
+like; not like
+# 空值
+is null ; is not null
+# 多重条件
+and ;or  
