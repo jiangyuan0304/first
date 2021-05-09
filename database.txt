@@ -33,3 +33,9 @@ like; not like
 is null ; is not null
 # 多重条件
 and ;or  
+
+
+表名.列名  是为了去除显示重复的列。简明需要的列的信息
+select * from a表名 join b表名 on 联合的条件
+
+# 当为表指定了别名之后，查询的语句的所有地方都要使用别名
