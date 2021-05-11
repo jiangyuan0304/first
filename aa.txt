@@ -1,5 +1,3 @@
-jiangyuan is so clever
-# git push first
-# git push second
-# git push thrid
-# check ignore
+semaphore n.信号标，旗语 v 打旗语，发信号
+
+__str__怎么用来着
