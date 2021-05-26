@@ -21,5 +21,30 @@ aa = Student.objects.get(pk=1)
 output : 2math
 # 类中定义了__str__ 返回了函数体内的内容了
 
+models 类中可以定义__str__方法和元数据class Meta:
+# 其中Meta有两个属性 db_table(表名) 和ordering （排序）
+# 类中可以放类吗，什么操作
+
 mysql 的客户端使用HeidiSQL 很好用
+# 看看怎么可以批量添加数据
+
+
+# class GradesManage(models.Manager):
+#     def get_queryset(self):
+#         return super(GradesManage,self).get_queryset().filter(isDelete=False)
+#     def add_student(self,name,date,sex,age,grade,isD=False):
+#         stu=self.model()
+#         stu.ggname=name
+#         stu.ggsex=sex
+#         stu.ggdate=date
+#         stu.ggage=age
+#         stu.gggrades=grade
+#         stu.isDelete=False
+#         return stu
+
+
+    @classmethod
+    def createGrades(cls,name,date,num,file,img,isD=False):
+        graa=cls(gname=name,gdate=date,gnum=num,gfile=file,gimg=img,isDelete=isD)
+        return graa
 
