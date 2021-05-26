@@ -1,0 +1,25 @@
+# 字段选项
+blank 针对表单验证的时候，可以填为空
+
+db_column 数据库中的列名为该属性所给的值
+ gname=models.CharField(db_column=name)
+
+unique 唯一值，不用说了
+
+null 如果为True 就是可以将空值以NULL的形式存储在数据库中
+
+
+
+对于数据库中的数据类型还是需要详细了解一下，因为django 中很多给你屏蔽了。
+(你只用使用Field 就可以默认使用什么类型和长度限制的字段）
+
+from myapp.models import Student
+aa = Grades.gra.all()
+# 因为类中定义了管理器 gra=models.Manager()
+
+aa = Student.objects.get(pk=1)
+output : 2math
+# 类中定义了__str__ 返回了函数体内的内容了
+
+mysql 的客户端使用HeidiSQL 很好用
+
