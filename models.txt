@@ -48,3 +48,37 @@ mysql 的客户端使用HeidiSQL 很好用
         graa=cls(gname=name,gdate=date,gnum=num,gfile=file,gimg=img,isDelete=isD)
         return graa
 
+
+
+User.objects.get(username="jiangyuan").password
+
+User.objects.all()[0]
+# 支持下标切片 且下表不能是负数
+
+
+字段选项
+User.objects.filter(username__contains="jia")
+# 注意是双下划线
+
+User.objects.filter(username__in=["jiangyuan"])
+
+User.objects.filter(datetime__year=2021)
+
+#聚合函数
+from django.db.models import Max, Min, Sum
+Student.stuobj.aggregate(Max("ggage"))
+# 注意 "ggage" 双引号
+output:  {"ggage_Max":24}
+
+# join 跨关联查询
+Grades.gra.filter(Student__ggname__contains="jiangyuan")
+
+#字段的比较
+Student.stuobj.filter(isDelete__lt=F("gggrades_id"))
+output: 字典 对象的集合 <QuerySet [<Student: jiangjiang-2021-05-28 00:14:28>, <Student: zhangzhang-2021-05-28 00:18:44>]>
+
+# F对象支持运算
+Student.stuobj.filter(isDelete__lt=F("gggrades_id")+20)
+
+# Q对象
+Student.stuobj.filter(Q(pk__lt=3)|Q(gggrades__gt=5))
