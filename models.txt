@@ -57,6 +57,11 @@ User.objects.all()[0]
 
 
 字段选项
+contains
+exact
+isnull, isnotnull
+endwith, startwith
+
 User.objects.filter(username__contains="jia")
 # 注意是双下划线
 
@@ -72,6 +77,9 @@ output:  {"ggage_Max":24}
 
 # join 跨关联查询
 Grades.gra.filter(Student__ggname__contains="jiangyuan")
+# 查找 name包含jiangyuan的班级是多少
+# 跨关联查询还是要看看的，详细一点
+
 
 #字段的比较
 Student.stuobj.filter(isDelete__lt=F("gggrades_id"))
@@ -82,3 +90,5 @@ Student.stuobj.filter(isDelete__lt=F("gggrades_id")+20)
 
 # Q对象
 Student.stuobj.filter(Q(pk__lt=3)|Q(gggrades__gt=5))
+
+这些个查询自己总结一下
