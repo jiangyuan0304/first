@@ -76,8 +76,9 @@ Student.stuobj.aggregate(Max("ggage"))
 output:  {"ggage_Max":24}
 
 # join 跨关联查询
-Grades.gra.filter(Student__ggname__contains="jiangyuan")
+Grades.gra.filter(student__ggname__contains="jiangyuan")
 # 查找 name包含jiangyuan的班级是多少
+# 注意student 模型是要小写的, 不然会报django.core.exceptions.FieldError 错误
 # 跨关联查询还是要看看的，详细一点
 
 
