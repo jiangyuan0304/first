@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+    window.onload=function()
+    {
+        var cbox1=document.getElementById('box1');
+        var cbox2=document.getElementById('box2');
+        old_left="";
+        /* alert(cbox1.offsetLeft); */
+        cbox2.onclick=function()
+        {  old_left=cbox1.offsetLeft
+           if(cbox1.offsetLeft<0)
+           {cbox1.style.left=cbox1.offsetLeft+404+"px";} 
+           else
+           {
+            cbox1.style.left=cbox1.offsetLeft+(-404)+"px"; 
+           }
+           
+        };
+        /* cbox2.onmouseout=function()
+        {
+           cbox1.style.left=cbox1.offsetLeft+404+"px"; 
+        }; */
+    };
+    </script>
+    <style>
+         *{padding:0;margin:0;}
+        #box1{width:400px;height:400px;
+        border: blue solid 2px;position: relative;left:-404px;top:200px;}
+        #box2{width:100px;height:100px;background:blueviolet;position:absolute;left:400px;top:150px;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1">我是多么的想你啊，你可知道啊
+        <div id="box2">
+            you should put past behind you ,if you want to move on
+        </div>
+    </div>
+</body>
+</html>

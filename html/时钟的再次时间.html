@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+    window.onload=function()
+    {
+        function toTab(n)
+        {
+            if(n<10)
+            {
+                return "0"+n;
+            }
+            else
+            {
+                return ""+n;
+            }
+        };
+        
+        function showclick()
+        {
+            var strr=[]
+            var aImg=document.getElementsByTagName('img');
+            var cli=new Date();
+            strr=toTab(cli.getHours())+toTab(cli.getMinutes())+toTab(cli.getSeconds());
+            for(var i=0;i<aImg.length;i++)
+            {
+                aImg[i].src="./image/"+strr[i]+".png";
+            } 
+        };
+        setInterval(showclick,1000);
+        showclick();
+    };
+    </script>
+    <style>
+    body{background:black;color:white;}
+    span{font-size:300px;display:inline-block;height:100px;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <span>:</span>
+        <img src="" alt="">
+        <img src="" alt="">
+        <span>:</span>
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+</body>
+</html>

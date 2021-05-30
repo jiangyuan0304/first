@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+    window.onload=function()
+    {  
+        var butt1=document.getElementById('box1'); 
+        var butt2=document.getElementById('box2'); 
+        var jytime=null;
+        butt1.onclick=function()
+        {  
+
+             jytime=setInterval(function()
+             {
+                 alert('a');
+             },2000);
+
+        };
+        butt2.onclick=function()
+        {
+            clearInterval(jytime);
+        };
+    };
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <input id="box1" type="button" value="出现"/>
+    <input id="box2" type="button" value="消失"/>
+</body>
+</html>

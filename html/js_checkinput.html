@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+    window.onload=function(){
+         var mtoo=document.getElementById('butt');
+         var nomtoo=document.getElementById('nobutt');
+         var opmtoo=document.getElementById('opbutt');
+
+         
+         var too=document.getElementById("box1");
+         var intoo=too.getElementsByTagName('input');
+         mtoo.onclick=function(){
+         for(var i=0;i<intoo.length;i++){
+               intoo[i].checked=true;
+
+         } 
+         };
+         nomtoo.onclick=function(){
+         for(var i=0;i<intoo.length;i++){
+               intoo[i].checked=false;
+
+         }  
+         };
+         opmtoo.onclick=funtion(){
+             for(var i=0;i<intoo.length;i++){
+                if(intoo[i].checked==true){
+                    intoo[i].checked=false;
+                }
+                else{
+                    intoo[i].checked=true;
+                }
+             }               
+         };
+    };
+    
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    全选<input id ="butt" type="checkbox" ></br>
+    全不选<input id ="nobutt" type="checkbox" ></br>
+    反选<input id ="opbutt" type="checkbox" ></br>
+    <div id="box1">
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+            <input type="checkbox" name="" id=""/></br>
+    </div>
+</body>
+</html>

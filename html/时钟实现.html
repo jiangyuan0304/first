@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    *{padding:0;margin:0;}
+
+    body{background:black; color: cornsilk;}
+    #main{margin:0 auto;}
+    span{font-size:300px;}
+    </style>
+    <script>
+    window.onload=function()
+    {   
+        function toTab(n){
+
+            if(n<10)
+            {
+                return "0"+n;
+            }
+            else{
+                return ""+n;
+            }
+
+        };
+        var aImg=document.getElementsByTagName('img');
+        /* var strr='135045' */
+        function jyytime(){
+            var oDate=new Date();
+        var strr=toTab(oDate.getHours())+toTab(oDate.getMinutes())+toTab(oDate.getSeconds());
+        for(var i=0;i<aImg.length;i++){
+            aImg[i].src="./image/"+strr.charAt(i)/* [i] */+".png";
+        }
+        }
+        setInterval(jyytime,1000); 
+        jyytime();
+    };
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+            <img src="./image/1.png" alt="">
+            <img src="./image/8.png" alt="">
+            <span>:</span>
+            <img src="./image4.png" alt="">
+            <img src="./iamge4.png" alt="">
+            <span>:</span>
+            <img src="./image3.png" alt="">
+            <img src="./image5.png" alt="">
+    </div>
+</body>
+</html>

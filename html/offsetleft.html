@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    div{width:100px;height:100px;background:blue;position:absolute;left:110px;top:100px;margin-left:100px;}
+    </style>
+    <script>
+    window.onload=function()
+    {
+        setInterval(function()
+        {
+            var oDiv=document.getElementById('box1');
+            oDiv.style.left=oDiv.offsetLeft+10+"px";
+        },500);
+    };
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>
