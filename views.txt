@@ -1,0 +1,4 @@
+HttpRequest 对象的属性和方法    
+GET 和Post 都是属于QueryDIct对象
+
+https://blog.csdn.net/cuomer/article/details/81214438
