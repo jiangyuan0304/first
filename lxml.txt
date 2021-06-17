@@ -1,0 +1,10 @@
+from lxml import etree
+with open("F:\window_dump.xml", 'r', encoding="utf-8") as f:
+    # 读的时候需要以"utf-8"的格式读
+    # f.read()
+    #fromstring 读入需要字节型
+    # root = etree.fromstring(bytes(f.read().encode("utf-8")))
+    # aa = root.xpath('//node[@text="频道"]/@bounds')
+    # print(aa[0])
+    for i in (etree.parse(f)).iter():
+        print(i.tag)
