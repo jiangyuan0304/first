@@ -1,0 +1,22 @@
+
+
+from lxml import etree, html
+
+# root = etree.parse("G:/eport.html")
+# root = etree.parse("F:\window_dump.xml")
+# root = html.etree.parse("G:\eport.html")
+
+# parse = etree.HTMLParser(encoding="utf-8")
+# select = etree.parse("G:\eport.html", parser=parse)
+# print(select.xpath('//span[@class="failed"]/text()'))
+import re
+selector = etree.parse(
+                       "G:\eport.html",
+                       parser=etree.HTMLParser(encoding="utf-8")
+
+                       )
+
+for per_content in selector.xpath('//tbody[@class="failed results-table-row"]/tr/td[position()<3]'):
+    tree1 = html.tostring(per_content, encoding="utf-8").decode('utf-8')
+    #<td class="col-name">test2.py::test_answer</td>
+    print(tree1)
