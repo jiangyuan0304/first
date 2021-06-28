@@ -1,0 +1,17 @@
+pytest-html 生成html格式的自动化测试报告
+pytest-xdist 多线程执行。测试用例分布式执行
+pytest-ordering 改变用例的执行顺序
+pytest-resunfailures 用例失败后重跑
+allure-pytest 用于生成完美的测试报告
+
+特点：编码格式固定： 必须是ANSI 
+
+[pytest]
+
+addopts=-vs
+testpaths=./interface
+python_files=test*.py
+python_classes=Test*
+python_functions=*qq
+markers = 
+        smoke : 冒烟用例
