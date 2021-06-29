@@ -1,0 +1,40 @@
+import cv2
+import numpy
+img_origin = cv2.imread(r"G:\\allpython\\django\\project\\test_grammer\\cvcvtest\\photo.jpg")
+img_rgb = cv2.imread(r"G:\\allpython\\django\\project\\test_grammer\\cvcvtest\\photo.jpg", 0)
+# img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+templates = cv2.imread(r'G:\allpython\django\project\test_grammer\cvcvtest\mouth.png', 0)
+w, h = templates.shape[::-1]
+# cv2.imshow('rgb', img_rgb)
+# # cv2.imshow('gray', img_gray)
+# cv2.waitKey(0)
+## 0表示一直等待
+# cv2.destroyAllWindows()
+
+# res = cv2.matchTemplate(img_rgb, templates, cv2.TM_CCOEFF_NORMED)
+res = cv2.matchTemplate(img_rgb, templates, cv2.TM_CCOEFF_NORMED)
+
+# threshold = 0.98
+# loc = numpy.where(res > threshold)
+# print("zip[::-1]: {}".format(loc[::-1]))
+# for pt in zip(*loc[::-1]):
+# # for pt in [(191, 386)]:
+#     print("{}".format(pt))
+#     # cv2.rectangle(img_origin, pt, (pt[0] + w, pt[1] + h), (7, 249, 151), 2)
+#     cv2.rectangle(img_origin, pt, (pt[0] + w, pt[1] + h), (255, 0, 0), 2)
+#     # cv2.rectangle 实在图片上绘制简单的图像
+#     # 3表示recangle 粗细的程度
+
+print(cv2.minMaxLoc(res))
+cv2.rectangle(img_origin, (179, 204), (192, 386), (255,0,0), 2)
+
+# # print(loc)
+cv2.imshow('Detected',img_origin)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# https://www.jb51.net/article/172294.htm
+
+# https://blog.csdn.net/qq_41603898/article/details/82219291
+
+# http://bluewhale.cc/2017-09-22/use-python-opencv-for-image-template-matching-match-template.html#codesyntax_4
