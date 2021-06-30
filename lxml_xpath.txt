@@ -20,3 +20,17 @@ for per_content in selector.xpath('//tbody[@class="failed results-table-row"]/tr
     tree1 = html.tostring(per_content, encoding="utf-8").decode('utf-8')
     #<td class="col-name">test2.py::test_answer</td>
     print(tree1)
+
+'//tbody[@class="failed results-table-row"]/tr/td[2]/text()'
+
+'//td[@class="col-result"]/following::td[1]/text()'
+# 表示取紧跟class = "col-result "属性的td 标签  td 标签 的第一个 ，并取这个td 标签内的文本
+
+
+//span[./text()="制片国家/地区:"]/following::text()[1]
+# []中括号的点代表的是当前的span 标签
+
+//div[@class="sort-icon"][1]/following::text()[1]
+
+
+//div[./text()="vvv"]/following::text()[1]
