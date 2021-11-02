@@ -1,0 +1,57 @@
+vim 使用技巧
+0 到行首 $到行尾
+
+git  checkout -b local  #创建本地分支local
+
+来自 <https://blog.csdn.net/nrsc272420199/article/details/85555911> 
+
+# 合并合并
+git rebase -i HEAD~2 //合并提交 --- 2表示合并两个
+
+来自 <https://blog.csdn.net/nrsc272420199/article/details/85555911> 
+
+git merge local  # local 是本地的分支名，将local 合并到master 上
+
+来自 <https://blog.csdn.net/nrsc272420199/article/details/85555911> 
+
+
+
+总结来说git rebase 又两个作用，
+1.合并commit  删除某个commit 
+	2. 拷贝分支到另一个分支
+
+第二点值得注意的地方是， git rebase 拷贝的时候是前开后闭的区间
+
+ git rebase 009175a077a018b2c11cf89878b9c38489735eab^ 69c48bfca8b2ca9e1c3836a38200f3a733b5fb93 onto master
+# 注意有一个^ 符号
+#在本地分支local  找到需要拷贝到master 的commit 起始部分的commit id
+
+完成之后切到master 主分支，会看到
+
+
+然后将HEAD 指向图中的commit id  即可，就完成了拷贝了
+# git reset --hard ba5514c 即可
+
+
+
+提交又三种状态
+一种是工作目录
+二中是add 之后的状态 index/stage 暂存区
+三是  Repository 提交之后
+repository  仓库
+
+
+git reset 的三种状态就分别对应的三个参数
+
+
+
+
+
+	1. git merge 不仅会合并local分支的commit 还会生成一个新的commit  类似于 如下图
+	而rebase不会生成，是直接在主分支后面追加的形式
+	2. 
+
+rebase 和merge 区别主要体现在git log 上
+主要区别在于git log上：是否保留分支的commit提交节点 。
+
+来自 <https://segmentfault.com/a/1190000018580144> 
