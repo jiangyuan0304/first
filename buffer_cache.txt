@@ -1,0 +1,30 @@
+https://zhuanlan.zhihu.com/p/348613625
+# 关于docker
+
+https://blog.csdn.net/LegenDavid/article/details/52301593
+# 查看进程io 情况
+
+
+https://www.cnblogs.com/niuben/p/12017242.html
+# Linux top命令详解
+
+
+https://www.cnblogs.com/xd502djj/archive/2011/03/01/1968041.html
+
+# Linux查看CPU和内存使用情况
+
+
+https://blog.csdn.net/u011373710/article/details/70037649
+# Linux SWAP内存交换机制基本概念
+
+https://blog.csdn.net/weixin_36347133/article/details/116651301
+#Linux内存buffers,free计算实际内存使用（buffers+cached+free）
+
+
+https://www.cnblogs.com/chenpingzhao/p/5161844.html
+# 【linux】free命令中cached和buffers的区别
+
+https://www.cnblogs.com/pipci/p/11399250.html
+#Linux Swap是干嘛的？
+
+https://www.jianshu.com/p/14a394abe2ab
