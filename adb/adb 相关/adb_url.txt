@@ -1,0 +1,51 @@
+adb shell dumpsys package com.netease.cloudmusic
+# 可以看到那些信息
+https://www.pianshen.com/article/82991239967/
+
+
+https://blog.csdn.net/lpjishu/article/details/72631070
+
+
+adb shell dumpsys activity | grep -i run
+
+来自 <https://blog.csdn.net/haha223545/article/details/99707814> 
+
+# 可以看到当前后台活动的app
+
+adb shell dumpsys window windows | findstr "Current"
+
+来自 <https://blog.csdn.net/mxjblog/article/details/51567266> 
+
+
+关于dumpsys
+https://www.jianshu.com/p/cc45a25c44c0
+
+
+adb 命令打开指定包名的APK
+
+来自 <https://blog.csdn.net/qq_39792615/article/details/107510854> 
+
+# 打开apk 的一个页面  
+
+
+adb logcat *:E
+
+来自 <https://blog.csdn.net/maoxuexue/article/details/105943219> 
+
+# 关于adb 的调试
+
+
+adb shell settings put global adb_enabled 0
+# 可以关闭adb 调试
+
+
+adbd 
+adb reboot
+
+adb wifi链接
+
+ 与应用交互
+
+来自 <https://blog.csdn.net/zhuxuyue/article/details/90760166?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-6-90760166.pc_agg_new_rank&utm_term=adb+%E6%96%AD%E5%BC%80%E8%AE%BE%E5%A4%87%E5%91%BD%E4%BB%A4&spm=1000.2123.3001.4430> 
+
+https://blog.csdn.net/zhuxuyue/article/details/90760166?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-6-90760166.pc_agg_new_rank&utm_term=adb+%E6%96%AD%E5%BC%80%E8%AE%BE%E5%A4%87%E5%91%BD%E4%BB%A4&spm=1000.2123.3001.4430
