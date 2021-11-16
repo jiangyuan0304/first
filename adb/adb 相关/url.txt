@@ -1,0 +1,24 @@
+find /dev/bus
+lsusb -D /dev/bus/usb/001/003
+
+
+https://blog.csdn.net/w356877795/article/details/120800766  # 很重要的一个reset usb 的方法
+
+echo -n "2717:ff48" | sudo tee /sys/bus/pci/drivers/ehci-pci/unbind
+echo -n "2717:ff48" | sudo tee /sys/bus/pci/drivers/ehci-pci/bind
+
+
+
+来自 <https://blog.csdn.net/upc886/article/details/103325984> 
+
+https://blog.csdn.net/azure_2010/article/details/114395680  # 关于bind  linux 复位usb设备 模拟热插拔脚本
+
+https://blog.csdn.net/dyq1991/article/details/82797875  Linux netlink socket使用总结
+
+https://blog.csdn.net/weixin_42494796/article/details/116915391?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&spm=1001.2101.3001.4242.1  #关于bind 的一个例子
+
+
+http://bbs.eeworld.com.cn/thread-148433-1-1.html
+
+
+udev  hotplug
