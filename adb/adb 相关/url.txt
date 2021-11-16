@@ -24,3 +24,5 @@ http://bbs.eeworld.com.cn/thread-148433-1-1.html
 udev  hotplug
 
 https://www.javaroad.cn/questions/294510
+
+https://www.openwrt.pro/post-548.html
