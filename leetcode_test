@@ -1,0 +1,27 @@
+第一遍结果
+class Solution:
+    def reorderList(self, head: ListNode) -> None:
+        """
+        Do not return anything, modify head in-place instead.
+        """
+        left = 0
+        right = len(head)
+        stack = list()
+        for i in range(len(head)):
+            if left == right or left > (right - 1):
+                break
+            if left == right -1:
+                stack.append(head[left])
+            else:
+                stack.append(head[left])
+                stack.append(head[right - 1])
+            left += 1
+            right -= 1
+        print(stack)
+
+
+链表高频操作模板
+
+1. 快慢指针找中点
+2. 反转链表
+3. 合并两个链表
