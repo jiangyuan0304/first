@@ -1,0 +1,50 @@
+树的遍历需要遍历左子树和右子树
+
+
+
+from collections import deque
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        # if root is None:
+        #     return 0
+        # else:
+        #     left_height = self.maxDepth(root.left)
+        #     right_height = self.maxDepth(root.right)
+        #     return max(left_height, right_height) + 1
+
+
+        if not root:
+            return 0
+        queue = deque([root])  # 初始化队列，放入根节点
+        depth = 0
+        while queue:
+            depth += 1  # 每处理完一层，深度+1
+            for _ in range(len(queue)):  # 处理当前层的所有节点
+                node = queue.popleft()
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+        return depth
+        # 层序遍历相当于一层层的去找，一次遍历左右子树
+        
+
+
+if __name__ == '__main__':
+    dd = TreeNode(15)
+    ee = TreeNode(7)
+    ff = TreeNode(20)
+    aa = TreeNode( 20, dd, ee)
+    cc = TreeNode(9,ff)
+    bb = TreeNode(3, cc, aa)
+    # 记住创建叶子节点的时候，左右子树都是None
+
+    obj = Solution()
+    obj.maxDepth(bb)
+
